@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#BFBFBF"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llHeader"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="#D8E0EE"
+        android:id="@+id/llHeader"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/line_view_layout"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Channel"
+            android:id="@+id/firstHeader"
+            android:gravity="center"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:textColor="#2F5597"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <include layout="@layout/line_view_layout"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Target"
+            android:gravity="center"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:textColor="#2F5597"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <include layout="@layout/line_view_layout"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Actual"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#2F5597"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <include layout="@layout/line_view_layout"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#2F5597"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <include layout="@layout/line_view_layout"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="#BFBFBF"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llHeader"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
